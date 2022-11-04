@@ -6,7 +6,7 @@ df = pd.DataFrame(data = {'column_title':mylist }, index = mylist2) # with index
 ```
 
 
-### add color to stdout
+### Add color to stdout
 ```
 class bcolors:
     HEADER = '\033[95m'
@@ -21,4 +21,15 @@ class bcolors:
 
 print(f"{bcolors.OKGREEN}OK{bcolors.ENDC}")
 print(f"{bcolors.FAIL}not found{bcolors.ENDC}")
+```
+
+### Subprocess
+#### write stdout to file, print stderr to screen
+```
+import subprocess as s
+cmd = [command, arg1, arg2, arg3]
+out = open(filename, "wb")
+p = s.Popen(cmd, universal_newlines=True, stdout=out, stderr = s.PIPE)
+mystderr = p.stderr.read()
+print(mystderr)
 ```
