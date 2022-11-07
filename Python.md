@@ -5,6 +5,10 @@ df = pd.DataFrame({'column_title': mylist})
 df = pd.DataFrame(data = {'column_title':mylist }, index = mylist2) # with index
 ```
 
+### Conda
+```
+conda create --name py39 python=3.9
+```
 
 ### Add color to stdout
 ```
