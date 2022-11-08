@@ -37,3 +37,16 @@ p = s.Popen(cmd, universal_newlines=True, stdout=out, stderr = s.PIPE)
 mystderr = p.stderr.read()
 print(mystderr)
 ```
+
+### Jupyter lab
+#### Collaborative notebook
+```
+#Start Jupyter lab on the server:
+conda create --name Jlab python=3.9
+conda activate Jlab
+conda install -c conda-forge jupyterlab
+python -m pip install jupyterlab-link-share
+
+#Do port forwarding on the client terminal:
+ssh -L 8888:localhost:8888 first.last@server.address
+```
