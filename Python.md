@@ -61,8 +61,15 @@ ssh -L 8888:localhost:8888 first.last@server.address
 ```
 
 ### Files
+#### Copy files
+```
+import shutil
+shutil.copyfile(src, dst)
+# 2nd option
+shutil.copy(src, dst)  # dst can be a folder; use shutil.copy2() to preserve timestamp
+```
 
-#### Check file integrity
+#### Check gzip file integrity
 ```
 def check_gzip_integrity(filepath):
     import gzip
