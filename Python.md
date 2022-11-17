@@ -59,3 +59,20 @@ python -m pip install jupyterlab-link-share
 #Do port forwarding on the client terminal:
 ssh -L 8888:localhost:8888 first.last@server.address
 ```
+
+### Files
+
+#### Check file integrity
+```
+def check_gzip_integrity(filepath):
+    import gzip
+    chunksize = 1024 * 1024
+    with gzip.open(filepath) as g:
+        try:
+            while g.read(chunksize):
+                pass
+            return True
+        except:
+            #print("Corrupted!", e)
+            return False
+```
