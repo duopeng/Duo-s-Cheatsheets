@@ -9,6 +9,9 @@ df = pd.DataFrame(data = {'column_title':mylist }, index = mylist2) # with index
 ```
 conda create --name py39 python=3.9
 ```
+```
+conda env create -f environment.yml
+```
 
 ### Add color to stdout
 ```
