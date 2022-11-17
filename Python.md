@@ -6,11 +6,17 @@ df = pd.DataFrame(data = {'column_title':mylist }, index = mylist2) # with index
 ```
 
 ### Conda
+creat environment
 ```
 conda create --name py39 python=3.9
 ```
+creat environment from file
 ```
 conda env create -f environment.yml
+```
+rename environment
+```
+conda rename -n old_name -d new_name
 ```
 
 ### Add color to stdout
