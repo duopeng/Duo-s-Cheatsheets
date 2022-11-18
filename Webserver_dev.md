@@ -1,6 +1,7 @@
 ## Port forwarding
 ```
-ssh -L [bind_address:]port:host:hostport name@hostaddress
+ssh -L [bind_address:]port:host:hostport name@hostaddress 
+#the host address is relative to the remote server, not the client, so 127.0.0.1 will work fine if the target application server is listening on all interfaces - 0.0.0.0
 ```
 
 
