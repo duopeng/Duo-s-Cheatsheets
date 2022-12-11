@@ -29,15 +29,15 @@ scontrol update jobid=X arraytaskthrottle=Y
 #SBATCH -o slurm.out/slurm-%A_%a.out
 
 # declare arrays
-readarray -t accessions < <(cat SRA_accession_list.txt)
-declare -x idx=$(( ${SLURM_ARRAY_TASK_ID} -1))
+readarray -t items < <(cat SRA_accession_list.txt) # read a list items from file
+declare -x idx=$(( ${SLURM_ARRAY_TASK_ID} -1)) # 0-based indexing (generated from array task ID)
 # load conda env
 module load anaconda
 conda activate sra
 #setting directories
 working_dir=""
 #main 
-command ${accessions[$idx]}
+command ${items[$idx]} # run command using one item in the list
 
 
 
