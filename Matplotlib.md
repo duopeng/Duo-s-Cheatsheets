@@ -3,7 +3,7 @@
 # 4x4 plots
 fig, axes = plt.subplots(nrows=4, ncols=4, figsize=(16,14))
 fig.subplots_adjust(hspace=0.5)
-fig.suptitle('EcR expression')
+fig.suptitle('main title')
 idx=0
 for tp in merged.obs["timepoint"].unique():
     for rep in merged.obs["replicate"].unique():
