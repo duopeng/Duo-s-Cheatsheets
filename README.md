@@ -1,5 +1,7 @@
 # Duo's handy cheat sheets
 
+## Frequently used commands organized by categories
+
 ## Click to view the cheat sheets
 - [Webserver_dev.md](Webserver_dev.md)
 - [Slurm.md](Slurm.md)
