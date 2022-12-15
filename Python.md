@@ -93,4 +93,8 @@ rename environment
 ```
 conda rename -n old_name -d new_name
 ```
-
+### Matplotlib
+fig, ax = plt.subplots(1, 3, figsize=(10, 3))
+plt.suptitle('')
+for j in range(''):
+    ax[j].imshow('')
