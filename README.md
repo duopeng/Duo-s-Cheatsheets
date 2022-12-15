@@ -1,6 +1,7 @@
 # Duo's handy cheat sheets
 
 ## Frequently used commands organized by categories
+## No more googling if forgetting a command
 
 ## Click to view the cheat sheets
 - [Webserver_dev.md](Webserver_dev.md)
