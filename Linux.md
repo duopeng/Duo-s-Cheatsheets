@@ -1,3 +1,9 @@
+### check peak memory of a process
+####
+```
+/usr/bin/time -v command_to_start_the_process
+```
+
 ### wget
 #### change progress reporting chunck size
 ```
