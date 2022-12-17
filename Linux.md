@@ -2,6 +2,7 @@
 ####
 ```
 /usr/bin/time -v command_to_start_the_process
+#then check the "Maximum resident set size (kbytes)" in the output
 ```
 
 ### wget
