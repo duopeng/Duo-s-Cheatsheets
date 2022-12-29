@@ -50,8 +50,14 @@ iterater over df by rows
 for index, row in df.iterrows():
     #do something
 ```
+accumulate data （rows） and then use it to create a dataframe#
+```
+data = []
+for a, b, c in some_function_that_yields_data():
+    data.append([a, b, c])
 
-
+df = pd.DataFrame(data, columns=['A', 'B', 'C'])
+```
 ### Files
 #### Copy files
 ```
