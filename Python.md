@@ -86,6 +86,14 @@ def check_gzip_integrity(filepath):
             return False
 ```
 
+### working dir
+Change working directory to the location of this script
+```
+abspath = os.path.abspath(__file__)
+dname = os.path.dirname(abspath)
+os.chdir(dname)
+```
+
 ### Conda
 creat environment
 ```
