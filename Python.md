@@ -36,6 +36,7 @@ out = open(filename, "wb")
 p = s.Popen(cmd, universal_newlines=True, stdout=out, stderr = s.PIPE)
 mystderr = p.stderr.read()
 print(mystderr)
+p.communicate()
 ```
 
 
