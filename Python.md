@@ -14,6 +14,16 @@ class bcolors:
 print(f"{bcolors.OKGREEN}OK{bcolors.ENDC}")
 print(f"{bcolors.FAIL}not found{bcolors.ENDC}")
 ```
+### bitwise flags
+#### check if flags contains 4
+```
+flag = 20
+flag & 4 == 0 # false
+
+flag = 48
+flag & 4 == 0 # true
+```
+
 ### Jupyter lab
 #### Collaborative notebook
 ```
