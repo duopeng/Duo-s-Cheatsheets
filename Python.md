@@ -51,6 +51,10 @@ p.communicate()
 
 
 ### Pandas
+read from excel file
+```
+pandas.read_excel(io, sheet_name=0, *, header=0, names=None, index_col=None, usecols=None, squeeze=None, dtype=None, engine=None, converters=None, true_values=None, false_values=None, skiprows=None, nrows=None, na_values=None, keep_default_na=True, na_filter=True, verbose=False, parse_dates=False, date_parser=None, thousands=None, decimal='.', comment=None, skipfooter=0, convert_float=None, mangle_dupe_cols=True, storage_options=None)
+```
 create a single-column dataframe
 ```
 df = pd.DataFrame({'column_title': mylist})
