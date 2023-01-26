@@ -1,3 +1,14 @@
+### Pip
+install requirements one by one
+```
+#Windows
+FOR /F %k in (requirements.txt) DO pip install %k
+```
+```
+#Mac/Linux
+cat requirements.txt | xargs -n 1 pip install
+```
+
 ### Add color to stdout
 ```
 class bcolors:
@@ -23,6 +34,17 @@ flag & 4 == 0 # false
 flag = 48
 flag & 4 == 0 # true
 ```
+### Subprocess
+#### write stdout to file, print stderr to screen
+```
+import subprocess as s
+cmd = [command, arg1, arg2, arg3]
+out = open(filename, "wb")
+p = s.Popen(cmd, universal_newlines=True, stdout=out, stderr = s.PIPE)
+mystderr = p.stderr.read()
+print(mystderr)
+p.communicate()
+```
 
 ### Jupyter lab
 #### Collaborative notebook
@@ -36,20 +58,6 @@ python -m pip install jupyterlab-link-share
 #Do port forwarding on the client terminal:
 ssh -L 8888:localhost:8888 first.last@server.address
 ```
-
-### Subprocess
-#### write stdout to file, print stderr to screen
-```
-import subprocess as s
-cmd = [command, arg1, arg2, arg3]
-out = open(filename, "wb")
-p = s.Popen(cmd, universal_newlines=True, stdout=out, stderr = s.PIPE)
-mystderr = p.stderr.read()
-print(mystderr)
-p.communicate()
-```
-
-
 ### Pandas
 read from excel file
 ```
