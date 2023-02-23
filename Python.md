@@ -150,6 +150,38 @@ def check_gzip_integrity(filepath):
             #print("Corrupted!", e)
             return False
 ```
+#### Merge gzipped files
+```
+def merge_files_and_rename(old_file_list, new_file):
+
+    print(f"Merging:")
+
+    old_file_list = old_file_list.split(',')
+
+    # Create the output directory if it doesn't exist
+    out_dir = os.path.dirname(new_file)
+    os.makedirs(out_dir, exist_ok=True)
+
+    # Remove output file if it already exists
+    if os.path.exists(new_file):
+        os.remove(new_file)
+
+    with gzip.open(new_file, 'wb') as outfile:
+        # Loop through each file in the file list
+        for file_name in old_file_list:
+            print(f"    {file_name}")
+            # Open the gzipped file for reading in binary mode
+            with gzip.open(os.path.join(file_name), 'rb') as infile:
+                # Read the contents of the file
+                file_contents = infile.read()
+                # Check if the last character of the file is a newline
+                if file_contents[-1:] != b'\n':
+                    # Append a newline character to the end of the file
+                    file_contents += b'\n'
+                # Write the contents of the file to the output file
+                outfile.write(file_contents)
+    print(f"    into a {bcolors.WARNING}new file{bcolors.ENDC}: {new_file}")
+```
 
 ### working dir
 Change working directory to the location of this script
