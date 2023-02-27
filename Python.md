@@ -39,18 +39,6 @@ if __name__ == "__main__":
     main()
 ```
 
-
-### Pip
-install requirements one by one
-```
-#Windows
-FOR /F %k in (requirements.txt) DO pip install %k
-```
-```
-#Mac/Linux
-cat requirements.txt | xargs -n 1 pip install
-```
-
 ### Add color to stdout
 ```
 class bcolors:
@@ -87,6 +75,19 @@ mystderr = p.stderr.read()
 print(mystderr)
 p.communicate()
 ```
+
+
+### Pip
+install requirements **-> one-by-one <-**
+```
+#Windows
+FOR /F %k in (requirements.txt) DO pip install %k
+```
+```
+#Mac/Linux
+cat requirements.txt | xargs -n 1 pip install
+```
+
 
 ### Jupyter lab
 #### Collaborative notebook
