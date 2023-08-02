@@ -38,6 +38,17 @@ def main():
 if __name__ == "__main__":
     main()
 ```
+```
+#version 2 with logging
+def worker(arg1,arg2,arg3):
+    log_file = open("worker_{arg1}_{arg2}_{arg3}.log", "w")
+    print(f"args: {arg1} {arg2} {arg3}", file=log_file, flush=True)
+
+pool = multiprocessing.Pool(processes=8)
+parallel_out = pool.starmap(worker, zip(list1, list2, cycle([string1])))
+pool.close()
+pool.join()
+```
 
 ### Add color to stdout
 ```
