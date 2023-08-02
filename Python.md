@@ -89,7 +89,7 @@ p.communicate()
 
 
 ### Pip
-install requirements **-> one-by-one <-**
+automatically install a list of requirements **-> one-by-one <-**
 ```
 #Windows
 FOR /F %k in (requirements.txt) DO pip install %k
