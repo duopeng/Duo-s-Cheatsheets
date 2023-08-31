@@ -1,5 +1,9 @@
+### check the size of all directories with 8 processes in parallel
+```
+find $HOME/ -maxdepth 1 -type d | tail -n +2 | parallel -j 8 du -sh {}
+```
+
 ### check peak memory of a process
-####
 ```
 /usr/bin/time -v command_to_start_the_process
 #then check the "Maximum resident set size (kbytes)" in the output
